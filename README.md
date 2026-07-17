@@ -1,4 +1,4 @@
-# PV-MPPT P-HIL Emulator on dSPACE MicroLabBox II
+# P-HIL : PV Emulator on dSPACE MicroLabBox II
 
 ## Overview
 This project implements a Power Hardware-in-the-Loop (P-HIL) emulation of a photovoltaic system, combining a physical PV panel model, an MPPT algorithm, a real hardware buck converter (inverter leg used in synchronous buck configuration), and a battery emulation, all running in real time on a dSPACE MicroLabBox II platform.
