@@ -43,36 +43,36 @@ I = Iph − Io [exp((V + Rs·I) / (Vt·a)) − 1] − (V + Rs·I) / Rp
 ## Hardware Platform
 
 **dSPACE MicroLabBox II (DS1203 + DS1303)** - real-time control platform
-![MicroLabBox II](figures/microlabbox.jpg)
+![MicroLabBox II](figures/hardware/MicrolabBox.jpg)
 
 **Interface board** - signal conditioning between the MicroLabBox II 
 and the buck converter
-![Interface board](figures/interface_board.jpg)
+![Interface board](figures/hardware/Interface_board.jpg)
 
 **RS PRO Programmable DC Power Supply** - fixed voltage source, used 
 in the early stages before the introduction of the TDK Lambda
-![RS PRO power supply](figures/rs_pro.jpg)
+![RS PRO power supply](figures/hardware/DC_source.jpg)
 
 **TDK Lambda Programmable DC Power Supply** - emulates the PV panel 
 source, driven in real time via DAC
-![TDK Lambda](figures/tdk_lambda.jpg)
+![TDK Lambda](figures/hardware/Tdk_lambda.jpg)
 
 **Buck converter** - inverter leg used in synchronous buck 
 configuration, real hardware power stage
-![Buck converter](figures/buck_converter.jpg)
+![Buck converter](figures/hardware/Hacheur.jpg)
 
 **Resistive load** - used in the early stages of the project, before 
 the introduction of the battery emulation
-![Resistive load](figures/resistive_load.jpg)
+![Resistive load](figures/hardware/Charge.jpg)
 
 **Regatron** - bidirectional source-load, emulates the battery
-![Regatron](figures/regatron.jpg)
+![Regatron](figures/hardware/Regatron.jpg)
 
 **Hall-effect current probe** - current measurement (0.1 V/A)
-![Current probe](figures/current_probe.jpg)
+![Current probe](figures/hardware/Pince_hall.jpg)
 
 **Oscilloscope** - PWM signal validation
-![Oscilloscope](figures/oscilloscope.jpg)
+![Oscilloscope](figures/hardware/Oscilloscope.jpg)
 
 **I/O channels used:**
 - Digital I/O 14 Channel 24 (RF1) - PWM output
