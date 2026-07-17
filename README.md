@@ -49,12 +49,17 @@ I = Iph − Io [exp((V + Rs·I) / (Vt·a)) − 1] − (V + Rs·I) / Rp
 and the buck converter
 ![Interface board](figures/interface_board.jpg)
 
-**TDK Lambda** - programmable power supply, emulates the PV panel source
-![TDK Lambda](figures/tdk_lambda.jpg)
+**RS PRO Programmable DC Power Supply (TDK Lambda)** - emulates the 
+PV panel source
+![Power supply](figures/power_supply.jpg)
 
 **Buck converter** - inverter leg used in synchronous buck 
 configuration, real hardware power stage
 ![Buck converter](figures/buck_converter.jpg)
+
+**Resistive load** - used in the early stages of the project, before 
+the introduction of the battery emulation
+![Resistive load](figures/resistive_load.jpg)
 
 **Regatron** - bidirectional source-load, emulates the battery
 ![Regatron](figures/regatron.jpg)
@@ -69,4 +74,3 @@ configuration, real hardware power stage
 - Digital I/O 14 Channel 24 (RF1) - PWM output
 - Analog Out 19 Channel 1 - DAC (drives TDK Lambda)
 - Analog In 23 Channel 1 - ADC (current measurement)
-
