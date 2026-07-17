@@ -5,6 +5,10 @@ This project implements a Power Hardware-in-the-Loop (P-HIL) emulation of a phot
 
 The system evolved through several stages, from offline Simulink simulation to full real-time hardware emulation using a programmable power supply (TDK Lambda) as the PV source, a physical buck converter as the power stage, and a bidirectional source-load (Regatron) as the battery.
 
+<p align="center">
+  <img src="figures/hardware/Setup_complet.jpg" width="700">
+</p>
+
 
 ## P-HIL Concept
 
