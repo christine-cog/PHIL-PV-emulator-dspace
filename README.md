@@ -40,3 +40,21 @@ I = Iph − Io [exp((V + Rs·I) / (Vt·a)) − 1] − (V + Rs·I) / Rp
 **Solving method:** the equation is solved in real time using the Newton-Raphson method, bounded to 10 iterations to guarantee compatibility with the real-time execution constraints of the dSPACE platform.
 
 
+## Hardware Platform
+
+| Component | Role | Photo |
+|---|---|---|
+| dSPACE MicroLabBox II (DS1203 + DS1303) | Real-time control platform | ![MicroLabBox II](figures/microlabbox.jpg) |
+| Interface board | Signal conditioning / connection between the MicroLabBox II and the buck converter | ![Interface board](figures/interface_board.jpg) |
+| TDK Lambda (programmable power supply) | Emulates the PV panel source | ![TDK Lambda](figures/tdk_lambda.jpg) |
+| Buck converter (inverter leg, synchronous buck configuration) | Real hardware power stage | ![Buck converter](figures/buck_converter.jpg) |
+| Regatron (bidirectional source-load) | Emulates the battery | ![Regatron](figures/regatron.jpg) |
+| Hall-effect current probe | Current measurement (0.1 V/A) | ![Current probe](figures/current_probe.jpg) |
+| Oscilloscope | PWM signal validation | ![Oscilloscope](figures/oscilloscope.jpg) |
+
+**I/O channels used:**
+- Digital I/O 14 Channel 24 (RF1) — PWM output
+- Analog Out 19 Channel 1 — DAC (drives TDK Lambda)
+- Analog In 23 Channel 1 — ADC (current measurement)
+
+
