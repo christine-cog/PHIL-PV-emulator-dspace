@@ -103,7 +103,6 @@ La première étape a permis de valider le modèle du panneau PV
 (équation à une diode, résolution Newton-Raphson) couplé à un étage 
 de puissance Simscape (convertisseur buck-boost, source de courant 
 contrôlée, charge résistive), avec l'algorithme MPPT tournant 
-directement en simulation. Deux implémentations du P&O ont été 
-testées et comparées via un switch manuel.
+directement en simulation. 
 
 Modèle complet disponible dans [`/simulink`](./simulink).
