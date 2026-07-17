@@ -91,3 +91,19 @@ the introduction of the battery emulation
 - Digital I/O 14 Channel 24 (RF1) - PWM output
 - Analog Out 19 Channel 1 - DAC (drives TDK Lambda)
 - Analog In 23 Channel 1 - ADC (current measurement)3 Channel 1 - ADC (current measurement)
+
+  ## Model Evolution
+
+Le projet a évolué à travers plusieurs étapes, chacune permettant de 
+valider une brique du système avant de passer à la suivante.
+
+### 5.1 - Simulation Simscape hors-ligne
+
+La première étape a permis de valider le modèle du panneau PV 
+(équation à une diode, résolution Newton-Raphson) couplé à un étage 
+de puissance Simscape (convertisseur buck-boost, source de courant 
+contrôlée, charge résistive), avec l'algorithme MPPT tournant 
+directement en simulation. Deux implémentations du P&O ont été 
+testées et comparées via un switch manuel.
+
+Modèle complet disponible dans [`/simulink`](./simulink).
