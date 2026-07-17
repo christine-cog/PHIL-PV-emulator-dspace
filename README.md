@@ -83,7 +83,7 @@ the introduction of the battery emulation
 
 <img src="figures/hardware/Pince_hall.jpg" width="400">
 
-- **Oscilloscope** - PWM signal validation
+- **Oscilloscope** - signal validation (PWM, current etc)
 
 <img src="figures/hardware/Oscilloscope.jpg" width="400">
 
