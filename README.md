@@ -49,9 +49,13 @@ I = Iph − Io [exp((V + Rs·I) / (Vt·a)) − 1] − (V + Rs·I) / Rp
 and the buck converter
 ![Interface board](figures/interface_board.jpg)
 
-**RS PRO Programmable DC Power Supply (TDK Lambda)** - emulates the 
-PV panel source
-![Power supply](figures/power_supply.jpg)
+**RS PRO Programmable DC Power Supply** - fixed voltage source, used 
+in the early stages before the introduction of the TDK Lambda
+![RS PRO power supply](figures/rs_pro.jpg)
+
+**TDK Lambda Programmable DC Power Supply** - emulates the PV panel 
+source, driven in real time via DAC
+![TDK Lambda](figures/tdk_lambda.jpg)
 
 **Buck converter** - inverter leg used in synchronous buck 
 configuration, real hardware power stage
