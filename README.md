@@ -39,6 +39,4 @@ I = Iph − Io [exp((V + Rs·I) / (Vt·a)) − 1] − (V + Rs·I) / Rp
 
 **Solving method:** the equation is solved in real time using the Newton-Raphson method, bounded to 10 iterations to guarantee compatibility with the real-time execution constraints of the dSPACE platform.
 
-**Key design choice — V = f(I) instead of I = f(V):** in the reference course model, the equation is typically solved as I = f(V). 
 
-In this hardware implementation, this was inverted to V = f(I), because the physical measurement available on the hardware side is the current (measured via a Hall-effect current probe), while the voltage is the quantity computed and imposed on the programmable power supply.
