@@ -138,3 +138,8 @@ Cette logique de calcul est entièrement construite et validée en isolation dan
 Cette configuration permet d'observer le comportement du panneau PV connecté à une vraie batterie, dans des conditions représentatives d'un système photovoltaïque réel.
 
 Modèle complet disponible dans [`/simulink`](./simulink).
+
+
+## Validation
+
+Le fonctionnement du système a été vérifié qualitativement à chaque étape via l'interface ControlDesk, en observant la réponse du MPPT à différentes valeurs d'irradiance (G) et de température (T) : convergence du duty cycle, stabilité du point de fonctionnement, et cohérence entre la tension imposée par la TDK Lambda et le courant mesuré.
