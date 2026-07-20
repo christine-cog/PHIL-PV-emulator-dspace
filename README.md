@@ -110,4 +110,13 @@ Avec une tension d'entrée connue et fixe, la relation V_sortie = d × E permet 
 
 Modèle complet disponible dans [`/simulink`](./simulink).
 
+### 3 - TDK Lambda + hacheur + charge résistive
+
+La TDK Lambda remplace l'alimentation fixe et devient pilotée en temps réel par le modèle PV (Newton-Raphson) via DAC, reproduisant ainsi le comportement électrique du panneau. Le hacheur alimente une charge résistive simple, et le courant est mesuré par une pince de Hall pour reboucler sur le calcul Newton-Raphson.
+
+L'algorithme MPPT (P&O) pilote le duty cycle du hacheur. Un dépassement du courant de court-circuit Isc du panneau a été observé au-delà d'un certain duty cycle, provoquant une divergence du calcul Newton-Raphson. La correction a porté sur le gain de mesure du courant afin repousser ce seuil de manière robuste., bien que cela ne permette pas de se debarasser complétement de cette divergence. Cette dernière dépend aussi grandement des différentes valeurs de l'Irradiance G qu'il nous est possible de modifier à partir de Control Desk. 
+
+
+Modèle complet disponible dans [`/simulink`](./simulink).
+
 
