@@ -97,7 +97,7 @@ the introduction of the battery emulation
 Le projet a évolué à travers plusieurs étapes, chacune permettant de 
 valider une brique du système avant de passer à la suivante.
 
-### 5.1 - Simulation Simscape hors-ligne
+### 1 - Simulation Simscape hors-ligne
 
 La première étape a permis de valider le modèle du panneau PV 
 (équation à une diode, résolution Newton-Raphson) couplé à un étage 
@@ -106,3 +106,20 @@ contrôlée, charge résistive), avec l'algorithme MPPT tournant
 directement en simulation. 
 
 Modèle complet disponible dans [`/simulink`](./simulink).
+
+### 2 - Validation de la chaîne de puissance en boucle ouverte
+
+Avant d'introduire le modèle PV en boucle fermée, cette étape a permis 
+de valider isolément la chaîne de puissance physique : une alimentation 
+DC fixe (30V) alimente le hacheur Lemta du laboratoire, piloté en duty 
+cycle par un signal PWM généré par dSPACE (10 kHz), sur une charge 
+résistive simple.
+
+Avec une tension d'entrée connue et fixe, la relation V_sortie = d × E 
+permet de vérifier que le signal PWM commande correctement le hacheur 
+et que la tension de sortie obtenue correspond à la théorie - sans la 
+complexité du modèle PV, isolée à cette étape.
+
+Modèle complet disponible dans [`/simulink`](./simulink).
+
+
