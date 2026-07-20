@@ -142,4 +142,15 @@ Modèle complet disponible dans [`/simulink`](./simulink).
 
 ## Validation
 
-Le fonctionnement du système a été vérifié qualitativement à chaque étape via l'interface ControlDesk, en observant la réponse du MPPT à différentes valeurs d'irradiance (G) et de température (T) : convergence du duty cycle, stabilité du point de fonctionnement, et cohérence entre la tension imposée par la TDK Lambda et le courant mesuré.
+The system's behavior was verified qualitatively at each stage through the ControlDesk interface, observing the MPPT response to different irradiance (G) and temperature (T) values: duty cycle convergence, operating point stability, and consistency between the voltage imposed by the TDK Lambda and the measured current.
+
+## Key Learnings
+
+This project provided a deep understanding of Power Hardware-in-the-Loop, from the physical modeling of a PV panel to the integration of a storage system:
+
+- **Rigorous physical modeling** - solving the single-diode equation in real time, with hardware-specific constraints (V=f(I), bounded Newton-Raphson iterations)
+- **Incremental validation** - isolating each system building block  (converter alone, then PV+MPPT, then active load) before assembling the full chain, for reliable fault diagnosis
+- **Diagnosis and correction of real physical faults** - current overshoot, physically ungrounded formulas, identified and corrected through a rigorous engineering approach
+- **Real-time embedded constraints** - synchronization of measurement and control loops, hardware limitations (licenses, communication buses)
+- **MPPT control** - implementation and robustness of the Perturb & Observe algorithm across changing system topologies
+- **Tool proficiency** - hands-on experience with MATLAB/Simulink for physical and control modeling, dSPACE MicroLabBox II as a real-time target platform, ConfigurationDesk for hardware I/O configuration, and ControlDesk for real-time monitoring and parameter tuning
