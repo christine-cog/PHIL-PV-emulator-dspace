@@ -121,10 +121,9 @@ Modèle complet disponible dans [`/simulink`](./simulink).
 
 ### 4 - Chaîne complète en boucle fermée : PV + MPPT + Regatron
 
-Cette étape assemble l'ensemble de la chaîne P-HIL en boucle fermée et fonctionnelle : panneau PV émulé dynamiquement par la TDK Lambda (pilotée par Newton-Raphson selon le courant mesuré), MPPT actif 
-recherchant le point de puissance maximale par Perturb & Observe, hacheur réversible , et le Regatron comme charge bidirectionnelle réelle en aval. 
+Cette étape assemble l'ensemble de la chaîne P-HIL en boucle fermée et fonctionnelle : panneau PV émulé dynamiquement par la TDK Lambda (pilotée par Newton-Raphson selon le courant mesuré), MPPT actif recherchant le point de puissance maximale par Perturb & Observe, hacheur réversible , et le Regatron comme charge bidirectionnelle réelle en aval. 
 
-La formule du duty cycle est ancrée sur la mesure réelle du bus DC (d = Vdc/V_new) avec Vdc dépe Le MPPT converge vers le point de puissance maximale du panneau indépendamment du comportement du Regatron en aval 
+La formule du duty cycle est ancrée sur la mesure réelle du bus DC (d = Vdc/V_new) avec Vdc dépendant de notre regatron. Le MPPT converge vers le point de puissance maximale du panneau indépendamment du comportement du Regatron en aval 
 
 Cette configuration permet d'observer le comportement du panneau PV connecté à une vraie batterie, dans des conditions représentatives d'un système photovoltaïque réel.
 
