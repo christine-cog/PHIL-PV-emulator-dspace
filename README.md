@@ -88,9 +88,12 @@ the introduction of the battery emulation
 <img src="figures/hardware/Oscilloscope.jpg" width="400">
 
 **I/O channels used:**
-- Digital I/O 14 Channel 24 (RF1) - PWM output
+- Digital I/O 14 Channel 1-6 (RF1) - PWM out
 - Analog Out 19 Channel 1 - DAC (drives TDK Lambda)
-- Analog In 23 Channel 1 - ADC (current measurement)3 Channel 1 - ADC (current measurement)
+- Analog In 23 Channel 1 - ADC (Vdc measurement)
+- Analog In 23 Channel 2 - ADC (current measurement)
+
+
 
   ## Model Evolution
 
