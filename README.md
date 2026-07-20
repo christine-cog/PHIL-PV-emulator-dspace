@@ -125,7 +125,16 @@ Cette étape assemble l'ensemble de la chaîne P-HIL en boucle fermée et foncti
 
 La formule du duty cycle est ancrée sur la mesure réelle du bus DC (d = Vdc/V_new) avec Vdc dépendant de notre regatron. Le MPPT converge vers le point de puissance maximale du panneau indépendamment du comportement du Regatron en aval 
 
-Cette configuration permet d'observer le comportement du panneau PV connecté à une vraie batterie, dans des conditions représentatives d'un système photovoltaïque réel.
+### 5 - Émulation dynamique de la batterie (en attente d'intégration)
 
+Cette étape vise à remplacer le réglage manuel et statique de la tension du Regatron par une consigne dynamique calculée, reproduisant le comportement électrique réel d'une batterie : une tension qui 
+évolue dans le temps selon son état de charge.
+
+Le SOC (état de charge) est obtenu par intégration du courant batterie (Ibat = dQ/dt), et la tension de consigne suit une courbe Vbatt(SOC) en trois zones - décharge profonde, plateau nominal, charge complète - caractéristique d'une batterie Li-ion ou plomb 12V.
+
+Cette logique de calcul est entièrement construite et validée en isolation dans Simulink. La liaison réelle vers le Regatron est prevue par bus CAN.
+
+
+Cette configuration permet d'observer le comportement du panneau PV connecté à une vraie batterie, dans des conditions représentatives d'un système photovoltaïque réel.
 
 Modèle complet disponible dans [`/simulink`](./simulink).
